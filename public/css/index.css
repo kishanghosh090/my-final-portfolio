@@ -123,6 +123,8 @@ header .navbar .list li h3:hover::after {
 .hero {
     height: 100vh;
     padding: 2rem;
+    width: 100%;
+    margin: auto;
     color: #fff;
     /* background-image: url('../static/bg.jpg'); */
     /* background-repeat: no-repeat;
@@ -130,36 +132,123 @@ header .navbar .list li h3:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
 }
 
 .hero .info {
     /* background-color: gray; */
-    max-width: 30%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    padding: 0.5rem;
+}
+
+
+.hero .info:hover::after {
+    height: 100%;
+}
+
+.hero .info::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 0;
+    border-radius: 2rem;
+    transition: all 0.5s ease-out;
+    z-index: -1;
+}
+
+
+.hero .info h3 {
+    color: #414141;
+}
+
+.hero .info .name {
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .hero .info .para {
     max-width: 80%;
+    font-size: 1.2rem;
+}
+
+.hero .info .skills {
+    display: flex;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero .info .skills .skill {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.hero .info .skills .skill h3 {
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    background-color: red;
+    border-radius: 0.5rem;
+    color: #fff;
+    max-width: 100%;
+}
+
+.hero .info .skills .skill span img {
+    width: 4rem;
+    rotate: 180deg;
+
 }
 
 .hero .myImg {
-    background-color: green;
+    /* background-color: green; */
     max-width: 50%;
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    border-radius: 1rem;
+}
+
+.hero .myImg:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.hero .myImg .imgName span {
+    margin-left: 0.7rem;
+}
+
+.hero .myImg .mail span {
+    margin-left: 0.7rem;
 }
 
 .hero .myImg img {
-    height: 10rem;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
 }
 
 .hero .info .skills {
     position: relative;
 }
 
-.hero .info .skills .skill-items {
+.hero .info .skills .skill-items .skill-inner {
     background-color: #FFF;
     border-radius: 1rem;
     max-width: 80%;
@@ -171,7 +260,25 @@ header .navbar .list li h3:hover::after {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    z-index: 9;
+    transition: all 0.2s ease-in-out;
+
+    translate: 0px 0px;
+}
+
+.hero .info .skills .skill-items .skill-items-hide {
     transform: scale(0);
+    /* translate: -285px 184px; */
+    right: -86rem;
+}
+
+.hero .info .skills .skill-items .skill-inner .cross {
+    font-size: 2rem;
+    z-index: 99;
+    color: black;
+    position: absolute;
+    right: 11px;
+    top: 5px;
 }
 
 .hero .info .skills .skill-items div .fa-html5 {
@@ -215,7 +322,8 @@ header .navbar .list li h3:hover::after {
     right: 62px;
     cursor: pointer;
 }
-.hero .hero-nav ul li a{
+
+.hero .hero-nav ul li a {
     font-size: 1.3rem;
     border-radius: 50%;
     height: 3rem;
@@ -224,19 +332,46 @@ header .navbar .list li h3:hover::after {
     justify-content: center;
     align-items: center;
 }
-.hero .hero-nav ul li a:hover{
+
+.hero .hero-nav ul li a:hover {
     background-color: red;
 }
-.hero .hero-nav ul li a{
+
+.hero .hero-nav ul li a {
     color: #fff;
 }
-.hero .hero-nav ul li a.active{
+
+.hero .hero-nav ul li a.active {
     border: 2px solid blue;
 }
 
 /* hero section end  */
 
 
-.about{
+
+/* about section start */
+
+.about {
     height: 100vh;
 }
+
+
+/* about section end */
+
+
+/* education sction start */
+
+.education{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3rem;
+}
+.education .collages{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* education sction end */
