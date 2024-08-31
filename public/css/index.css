@@ -321,6 +321,7 @@ header .navbar .list li h3:hover::after {
     position: fixed;
     right: 62px;
     cursor: pointer;
+    z-index: 99;
 }
 
 .hero .hero-nav ul li a {
@@ -361,17 +362,78 @@ header .navbar .list li h3:hover::after {
 
 /* education sction start */
 
-.education{
+.education {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 3rem;
 }
-.education .collages{
+
+.education .collages {
     padding: 2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+}
+.education .collages h2{
+    font-size: 4rem;
+    transition: all 0.4s ease-out;
+}
+.education .collages h2:hover{
+    cursor: pointer;
+    transform: scale(1.1)translateY(-15px);
+    border-bottom: 2px solid #fff;
 }
 
+.education .collages .iitm,.education .collages .gour{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.education .collages .iitm .img img{
+    max-width: 33rem;
+    height: 25rem;
+    border-radius:1rem ;
+    transition: all 0.4s ease-in-out;
+}
+.education .collages .iitm .img img:hover{
+    opacity: 0.5;
+    border: 2px solid #fff;
+}
+
+.education .collages .iitm .iitmData{
+    max-width: 40%;
+    font-size: 1.5rem;
+}
+
+.education .collages .gour .img img{
+    height: 25rem;
+    max-width: 33rem;
+    background-size: cover;
+    border-radius:1rem ;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+}
+.education .collages .gour .img img:hover{
+    opacity: 0.5;
+    border: 2px solid #fff;
+    z-index: -2;
+}
+.education .collages .gour .gourData{
+    max-width: 40%;
+    font-size: 1.5rem;
+}
 /* education sction end */
+
+
+/* contact section start */
+
+/* contact section end */
+
+
+/* footer start */
+
+/* footer end */
