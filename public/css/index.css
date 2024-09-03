@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap');
+/* font-family: "Fira Mono", monospace;
+  font-weight: 400;
+  font-style: normal; */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +15,7 @@
 
 body {
     background-color: #081b29;
+
 }
 
 /* navbar start */
@@ -31,6 +37,13 @@ header .navbar .logo h1 {
     color: #fff;
     position: relative;
     transition: all 0.3s ease-out;
+}
+
+header .navbar .logo h1::first-letter {
+    font-size: 2.2rem;
+    color: #ff97a0;
+    font-family: 'FontAwesome';
+    margin-right: 0.2rem;
 }
 
 header .navbar .logo h1:hover {
@@ -84,7 +97,11 @@ header .navbar .list li a:nth-child(1):hover::after {
     width: 100%;
 }
 
-header .navbar .list li h3 {
+header .navbar .list h3 a {
+    color: #fff;
+}
+
+header .navbar .list h3 {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
@@ -92,10 +109,12 @@ header .navbar .list li h3 {
     color: #fff;
     position: relative;
     z-index: 2;
+    cursor: pointer;
+    color: #fff;
 }
 
 
-header .navbar .list li h3::after {
+header .navbar .list h3::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -108,7 +127,7 @@ header .navbar .list li h3::after {
     z-index: -1;
 }
 
-header .navbar .list li h3:hover::after {
+header .navbar .list h3:hover::after {
     width: 100%;
 }
 
@@ -170,6 +189,7 @@ header .navbar .list li h3:hover::after {
 
 .hero .info h3 {
     color: #414141;
+    font-family: "Fira Mono", monospace;
 }
 
 .hero .info .name {
@@ -179,7 +199,8 @@ header .navbar .list li h3:hover::after {
 
 .hero .info .para {
     max-width: 80%;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-family: "Fira Mono", monospace;
 }
 
 .hero .info .skills {
@@ -232,10 +253,14 @@ header .navbar .list li h3:hover::after {
 
 .hero .myImg .imgName span {
     margin-left: 0.7rem;
+    font-family: "Fira Mono", monospace;
+    font-size: 1.3rem;
 }
 
 .hero .myImg .mail span {
     margin-left: 0.7rem;
+    font-family: "Fira Mono", monospace;
+    font-size: 1.3rem;
 }
 
 .hero .myImg img {
@@ -255,21 +280,21 @@ header .navbar .list li h3:hover::after {
     padding: 1rem;
     font-size: 5rem;
     position: absolute;
-    top: -289px;
-    right: -206px;
+    top: -199px;
+    right: -69px;
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
     z-index: 9;
     transition: all 0.2s ease-in-out;
-
     translate: 0px 0px;
 }
 
+
 .hero .info .skills .skill-items .skill-items-hide {
     transform: scale(0);
-    /* translate: -285px 184px; */
-    right: -86rem;
+    /* translate: -285px 184px;
+    right: -86rem; */
 }
 
 .hero .info .skills .skill-items .skill-inner .cross {
@@ -353,9 +378,73 @@ header .navbar .list li h3:hover::after {
 /* about section start */
 
 .about {
-    height: 100vh;
+    color: #fff;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
+.about .aboutHeading {
+    color: #FFF;
+    font-size: 3rem;
+
+}
+
+.about .aboutDescription {
+    font-size: 1.5rem;
+    width: 80%;
+    font-family: "Fira Mono", monospace;
+}
+
+.about .skills {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    gap: 4rem;
+    perspective: 800px;
+}
+
+
+.about .skills .skill {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 10rem;
+    width: 20rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+.about .skills .skill:hover {
+    transform: rotateY(10deg);
+    box-shadow: 0 0 12px #04fffb,
+        0 0 25px #04fffb;
+}
+
+.about .skills .skill i {
+    font-size: 2rem;
+}
+.about .skills .skill div {
+    height: 4rem;
+    width: 4rem;
+    padding: 0.9rem;
+    border: 2px solid red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2 ease-out;
+}
+.about .skills .skill div:hover{
+    background-color: red;
+}
 
 /* about section end */
 
@@ -376,64 +465,115 @@ header .navbar .list li h3:hover::after {
     flex-direction: column;
     gap: 4rem;
 }
-.education .collages h2{
+
+.education .collages h2 {
     font-size: 4rem;
     transition: all 0.4s ease-out;
 }
-.education .collages h2:hover{
+
+.education .collages h2:hover {
     cursor: pointer;
     transform: scale(1.1)translateY(-15px);
     border-bottom: 2px solid #fff;
 }
 
-.education .collages .iitm,.education .collages .gour{
+.education .collages .iitm,
+.education .collages .gour {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 2rem;
 }
-.education .collages .iitm .img img{
+
+.education .collages .iitm .img img {
     max-width: 33rem;
     height: 25rem;
-    border-radius:1rem ;
+    border-radius: 1rem;
     transition: all 0.4s ease-in-out;
 }
-.education .collages .iitm .img img:hover{
+
+.education .collages .iitm .img img:hover {
     opacity: 0.5;
     border: 2px solid #fff;
 }
 
-.education .collages .iitm .iitmData{
+.education .collages .iitm .iitmData {
     max-width: 40%;
     font-size: 1.5rem;
+    font-family: "Fira Mono", monospace;
 }
 
-.education .collages .gour .img img{
+.education .collages .gour .img img {
     height: 25rem;
     max-width: 33rem;
     background-size: cover;
-    border-radius:1rem ;
+    border-radius: 1rem;
     transition: all 0.4s ease-in-out;
     z-index: -1;
 }
-.education .collages .gour .img img:hover{
+
+.education .collages .gour .img img:hover {
     opacity: 0.5;
     border: 2px solid #fff;
     z-index: -2;
 }
-.education .collages .gour .gourData{
+
+.education .collages .gour .gourData {
     max-width: 40%;
     font-size: 1.5rem;
+    font-family: "Fira Mono", monospace;
 }
+
 /* education sction end */
 
 
 /* contact section start */
 
+.contact {
+    height: 100vh;
+}
+
+
 /* contact section end */
 
 
 /* footer start */
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    color: #fff;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: "Fira Mono", monospace;
+    border: 1px solid orange;
+}
+
+.footer .arrow a {
+    color: #fff;
+    font-size: 5rem;
+}
+
+.footer .details .img {
+    display: flex;
+    align-items: center;
+
+}
+
+.footer .details .img span {
+    font-family: "Fira Mono", monospace;
+    font-size: 1.2rem;
+}
+
+.footer .details .img img {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
 
 /* footer end */
+
+/* 
+try code */
