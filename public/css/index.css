@@ -431,6 +431,7 @@ header .navbar .list h3:hover::after {
 .about .skills .skill i {
     font-size: 2rem;
 }
+
 .about .skills .skill div {
     height: 4rem;
     width: 4rem;
@@ -442,11 +443,15 @@ header .navbar .list h3:hover::after {
     align-items: center;
     transition: all 0.2 ease-out;
 }
-.about .skills .skill div:hover{
+
+.about .skills .skill div:hover {
     background-color: red;
 }
 
 /* about section end */
+
+
+
 
 
 /* education sction start */
@@ -530,13 +535,113 @@ header .navbar .list h3:hover::after {
 
 /* contact section start */
 
+/* contact section end */
 .contact {
-    height: 100vh;
+    /* background-color: #ff97a0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 4rem;
+    color: #fff;
 }
 
+.contact h1 {
+    font-size: 4rem;
+    transition: all 0.3s ease-out;
+}
 
-/* contact section end */
+.contact h1:hover {
+    cursor: pointer;
+    transform: scale(1.1)translateY(-15px);
+    border-bottom: 2px solid #fff;
+}
 
+.contact .contactMe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    gap: 3rem;
+}
+
+.contact .contactMe .contact-para {
+    width: 80%;
+    font-size: 2rem;
+}
+
+.contact .contactMe .contact-para h3 {
+    font-family: "Fira Mono", monospace;
+}
+
+.contact .contactMe .contactForm {
+    width: 80%;
+    padding: 4rem 2rem;
+    border: 1px solid #04fffb;
+    display: flex;
+    gap: 3rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in;
+}
+.contact .contactMe .contactForm:hover{
+    border-radius: 0rem;
+}
+
+.contact .contactMe .contactForm form .mb-3 .email {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact .contactMe .contactForm form .mb-3 .form-control {
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.contact .contactMe .contactForm form .mb-3 .Phone {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact .contactMe .contactForm form .description .form-control {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact .contactMe .contactForm form .description .text-area {
+    width: 145%;
+    background-color: transparent;
+    border: 1px solid #04fffb;
+    border-radius: 1rem;
+}
+
+.contact .contactMe .contactForm form .submit {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.contact .contactMe .contactForm form .submit button {
+    padding: 0.6rem 2rem;
+    background-color: transparent;
+    border: 1px solid #04fffb;
+    border-radius: 1rem;
+    transition: all 0.2s ease-out;
+    color: #fff;
+}
+
+.contact .contactMe .contactForm form .submit button:hover {
+    background-color: #04fffb;
+    cursor: pointer;
+    color: #000;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #04fffb,
+        0 0 25px #04fffb;
+}
 
 /* footer start */
 .footer {
